@@ -4,10 +4,16 @@ body {
   margin: 0;
 }
 body {
-  color: #fff;
+  color: #5f0f40;
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
-  background: rgba(38, 3, 79, 0.816);
+  /* background: #0f4c5c; */
+  background-image: radial-gradient(#4ea5bb 0, 1%, #0f4c5c 20%),
+    radial-gradient(#166e84 20%, transparent 20%);
+  background-position: 0 0;
+  background-size: 100px 100px;
+  height: 200px;
+  width: 100%;
 }
 
 .main-content {
@@ -38,6 +44,7 @@ h1 {
   position: relative;
   transition: 0.4s ease-in-out;
   border-radius: 5px 15px 15px 5px;
+
   transform-origin: left center 0px;
   display: inline-block;
   margin: 30px;
@@ -53,114 +60,40 @@ h1 {
 }
 
 .notebook-cover {
-  background: #cc4b48;
+  /* background: linear-gradient(0.25turn, #9a031e, #a92902ec); */
   height: 450px;
   width: 375px;
   position: absolute;
   border-radius: 5px 15px 15px 5px;
   z-index: 10;
-  transition: 0.5s linear;
+  transition: 0.8s linear;
   transform-style: preserve-3d;
   transform-origin: left center 0px;
-  &:before {
-    content: "";
-    position: absolute;
-    width: 10px;
-    height: calc(100% + 2px);
-    top: -1px;
-    z-index: 100;
-    border-radius: 2px;
-    right: 25px;
-    transition: 2s ease;
-    background: linear-gradient(
-      to right,
-      darken($color-orange, 15%) 0%,
-      $color-orange 12%,
-      darken($color-orange, 15%) 25%,
-      $color-orange 37%,
-      darken($color-orange, 15%) 50%,
-      $color-orange 62%,
-      darken($color-orange, 15%) 75%,
-      $color-orange 87%,
-      darken($color-orange, 15%) 100%
-    );
-  }
-}
-
-.notebook-cover {
-  &.blue {
-    background: $color-blue;
-    &:before {
-      background: linear-gradient(
-        to right,
-        darken($color-blue, 15%) 0%,
-        $color-blue 12%,
-        darken($color-blue, 15%) 25%,
-        $color-blue 37%,
-        darken($color-blue, 15%) 50%,
-        $color-blue 62%,
-        darken($color-blue, 15%) 75%,
-        $color-blue 87%,
-        darken($color-blue, 15%) 100%
-      );
-    }
-  }
-  &.green {
-    background: $color-green;
-    &:before {
-      background: linear-gradient(
-        to right,
-        darken($color-green, 15%) 0%,
-        $color-green 12%,
-        darken($color-green, 15%) 25%,
-        $color-green 37%,
-        darken($color-green, 15%) 50%,
-        $color-green 62%,
-        darken($color-green, 15%) 75%,
-        $color-green 87%,
-        darken($color-green, 15%) 100%
-      );
-    }
-  }
-  &.yellow {
-    background: $color-yellow;
-    &:before {
-      background: linear-gradient(
-        to right,
-        darken($color-yellow, 20%) 0%,
-        $color-yellow 12%,
-        darken($color-yellow, 20%) 25%,
-        $color-yellow 37%,
-        darken($color-yellow, 20%) 50%,
-        $color-yellow 62%,
-        darken($color-yellow, 20%) 75%,
-        $color-yellow 87%,
-        darken($color-yellow, 20%) 100%
-      );
-    }
-  }
+  --s: 120px;
+  --c1: #a14016;
+  --c2: #cfc89a;
+  --_g: var(--s) var(--s)
+    radial-gradient(var(--c1) 17%, var(--c2) 18% 35%, #0000 36.5%);
+  background: calc(var(--s) / -4) calc(var(--s) / -4) / var(--_g),
+    calc(var(--s) / 4) calc(var(--s) / 4) / var(--_g),
+    radial-gradient(var(--c2) 34%, var(--c1) 36% 68%, #0000 70%) 0 0 /
+      calc(var(--s) / 2) calc(var(--s) / 2),
+    repeating-linear-gradient(45deg, var(--c1) -12.5% 12.5%, var(--c2) 0 37.5%)
+      0 0 / var(--s) var(--s);
 }
 
 .notebook-skin {
   height: 50px;
-  background: #e8e8e0;
+  background: linear-gradient(#f8e3db, #bf997c);
   margin-top: 80px;
   padding: 15px;
-  font-size: 20px;
+  font-size: 35px;
   position: relative;
   z-index: 10;
-  color: #222;
-  text-align: left;
+  font-family: "Pixelify Sans";
+  color: #5f0f40;
+  text-align: center;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  &:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 15px;
-    left: 0;
-    bottom: 0;
-    background: #cddc39;
-  }
 }
 
 .notebook-page {
