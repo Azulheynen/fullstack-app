@@ -93,19 +93,15 @@ span {
   position: absolute;
 }
 .postcard {
+  animation: postcardAnimation 1s infinite;
+  transition: transform 0.5s ease, box-shadow 0.35s ease-in-out;
   height: 100px;
   width: 900px;
-  /* border-radius: 30px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 80px;
   position: relative;
-  /* width: 280px;
-  height: 420px; */
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
   background: #9a031e;
   border-radius: 10px 10px 10px 10px;
   background-image: linear-gradient(
@@ -116,6 +112,29 @@ span {
   );
   box-shadow: 2px 6px 20px 0px #7f570e;
 }
+
+@keyframes postcardAnimation {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+}
+
+.postcard:hover {
+  animation: none; /* Stop shake animation */
+  transform: scale(1.05); /* Slight scale for hover effect */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Optional: Enhanced shadow on hover */
+}
+
 .postcard:after {
   height: 52px;
   width: 100%;
@@ -183,6 +202,10 @@ span {
 a {
   color: #ffe882;
   text-decoration: none;
+}
+
+.linkToText {
+  color: #5f0f40;
 }
 
 .postext {
@@ -325,15 +348,6 @@ h1 {
   h1 {
     font-size: 40pt;
   }
-}
-
-hr {
-  width: 80%;
-  opacity: 0.7;
-  margin-top: 20px;
-  margin-bottom: -60px;
-  border-radius: 50px;
-  padding: 40px;
 }
 
 h2 {
