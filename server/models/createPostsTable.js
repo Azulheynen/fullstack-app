@@ -18,6 +18,11 @@ module.exports = (sequealize, Datatypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
+    column: {
+      type: Datatypes.STRING,
+      allowNull: false,
+      primaryKey: true,
+    },
   });
   return Posts;
 };
