@@ -106,13 +106,13 @@ span {
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
-  background: #c6575a;
+  background: #9a031e;
   border-radius: 10px 10px 10px 10px;
   background-image: linear-gradient(
     to right,
-    #9a501a 48px,
-    #ba0716 50px,
-    transparent 50px
+    #a14016 78px,
+    #5f0f40 30px,
+    transparent 80px
   );
   box-shadow: 2px 6px 20px 0px #7f570e;
 }
@@ -152,15 +152,6 @@ span {
     transparent 50px
   );
 }
-.book:before {
-  height: 20px;
-  width: 160px;
-  right: 40px;
-  top: 72px;
-  background: #d11f2f;
-  /* border-radius: 20px; */
-  box-shadow: 0px 36px #d11f2f;
-}
 
 /* .post {
   height: 300px;
@@ -178,13 +169,20 @@ span {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   cursor: pointer;
 }
-.post .title {
+
+.title {
   flex: 20%;
-  border-bottom: 1px solid lightgray;
-  background-color: dodgerblue;
-  display: grid;
   place-content: center;
-  color: white;
+  text-align: center;
+  font-family: "Homemade Apple", cursive;
+  font-size: 20px;
+  font-weight: 900;
+  font-style: normal;
+}
+
+a {
+  color: #ffe882;
+  text-decoration: none;
 }
 
 .postext {
@@ -193,29 +191,17 @@ span {
   place-content: center;
 }
 
-.footer {
-  flex: 20%;
-  border-top: 1px solid lightgray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 15px;
-  color: white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
-}
-
 .background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: url("https://picsum.photos/id/112/3840/2160");
+  background: url("https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
   background-size: cover;
   background-position: center top;
   z-index: -1;
-  filter: blur(10px);
+  filter: blur(5px);
 }
 .content-container {
   display: flex;
