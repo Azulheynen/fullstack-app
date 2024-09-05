@@ -1,5 +1,5 @@
 import React from "react";
-import "../App.css";
+import "./singlePost.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -15,20 +15,17 @@ const PostCard = ({ id }) => {
 
   return (
     <div>
-      {listOfPosts.map((post, key) => {
-        return (
-          <div className="postcard">
-            <div key={post.id} className="postDiv" id="postDiv">
-              <div className="title" data-test="post-title">
-                <Link to={`/posts/${post.id}`} id="LinkToPost">
-                  {" "}
-                  {post.title}
-                </Link>
+      <ul>
+        {listOfPosts.map((post, index) => (
+          <li key={post.id} className="sticky-note">
+            <Link to={`/posts/${post.id}`} className="note-link">
+              <div className="note-content">
+                <h2>{post.title}</h2>
               </div>
-            </div>
-          </div>
-        );
-      })}
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };

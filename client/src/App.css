@@ -41,22 +41,36 @@ body {
 /* CREATE POST PAGE CSS */
 
 .createPostPage {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Pixelify Sans";
   width: 100vw;
   height: 70vh;
   display: flex;
   justify-content: center;
+
   align-items: center;
 }
 .formContainer {
+  font-family: "Pixelify Sans";
+  background: url("https://as1.ftcdn.net/v2/jpg/09/10/43/36/1000_F_910433691_NULdRVBaCxuiW5xhabdJl7OcjKTfEKnO.jpg");
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 500px;
   height: auto;
   padding: 20px;
-  border: 5px solid dodgerblue;
+  border: 5px solid #9a031e;
+  box-shadow: 5px 5px rgb(127, 231, 255), 10px 10px 10px rgb(246, 255, 0),
+    15px 15px 10px rgb(237, 117, 209);
+  blur-radius: 10%;
+  font-size: 25px;
+  text-align: center;
+  color: #ffffff;
+  text-shadow: rgb(0, 0, 0) 20px 0 20px;
   border-radius: 5px;
+}
+.formContainer label {
+  font-size: 25px;
+  text-shadow: rgb(93, 86, 9) 20px 0px 20px;
 }
 
 .formContainer #inputCreatePost {
@@ -66,25 +80,33 @@ body {
   border: 2px solid grey;
   border-radius: 5px;
   padding-left: 10px;
+
   font-size: 20px;
 }
 
 .formContainer button {
   margin-top: 15px;
+  margin-left: 10%;
   height: 40px;
+  width: 79%;
   border: none;
-  background-color: lightskyblue;
+  background-color: #9a031e;
   border-radius: 5px;
-  color: white;
+  color: rgb(221, 202, 202);
+  font-family: "Pixelify Sans";
+  border-radius: 205px;
+  font-size: 25px;
 }
 
 .formContainer button:hover {
   cursor: pointer;
-  background-color: dodgerblue;
+  background-color: #cf6d7f;
 }
 
 span {
-  color: red;
+  color: rgb(255, 255, 255);
+  transition: 0.8s ease;
+  animation: postcardAnimation;
 }
 
 *:before,
@@ -193,7 +215,7 @@ span {
   flex: 20%;
   place-content: center;
   text-align: center;
-  font-family: "Homemade Apple", cursive;
+  font-family: "Yellowtail", cursive;
   font-size: 20px;
   font-weight: 900;
   font-style: normal;
@@ -252,7 +274,7 @@ a {
   z-index: 1;
   filter: brightness(0.95) sepia(20%) saturate(80%);
   border-radius: 30px;
-  height: 90vh;
+  height: 50vh;
   clip-path: polygon(
     0% 0%,
     0% 93%,

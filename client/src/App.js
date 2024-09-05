@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import SinglePost from "./Postcards/SinglePost";
 import PostCard from "./Postcards/postCards";
 import Home from "./Home/home";
+import CreatePost from "./Postcards/createPost";
 import "./App.css";
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/create" element={<CreatePost />} />
         <Route path="/posts" element={<PostCard />} />
         <Route path="/posts/:id" element={<SinglePost />} />
       </Routes>

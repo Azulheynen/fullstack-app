@@ -14,13 +14,13 @@ module.exports = (sequealize, Datatypes) => {
     },
     id: {
       type: Datatypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
       autoIncrement: true,
     },
     column: {
       type: Datatypes.STRING,
-      allowNull: false,
+      allowNull: true,
       primaryKey: true,
     },
   });
